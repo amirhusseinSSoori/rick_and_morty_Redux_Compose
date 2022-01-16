@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.apollographql.apollo'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -62,4 +65,33 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+
+    implementation "com.google.dagger:hilt-android:2.40.1"
+    kapt "com.google.dagger:hilt-compiler:2.40.1"
+
+
+    implementation "com.apollographql.apollo:apollo-runtime:2.5.9"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:2.5.9"
+    implementation "com.dropbox.mobile.store:store4:4.0.4-KT15"
+
+
+
+    implementation("androidx.room:room-runtime:2.4.1")
+    implementation("androidx.room:room-ktx:2.4.1")
+    kapt ("androidx.room:room-compiler:2.4.1")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+}
+
+configurations.all {
+    resolutionStrategy {
+        force ("org.xerial:sqlite-jdbc:3.34.0")
+
+    }
+}
+
+apollo {
+    generateKotlinModels.set(true)
 }
