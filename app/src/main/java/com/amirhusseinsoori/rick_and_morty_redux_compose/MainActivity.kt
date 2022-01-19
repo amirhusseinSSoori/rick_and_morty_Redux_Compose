@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                 Surface(color = MaterialTheme.colors.background) {
                     viewModel.state.collectAsState().let {
                         it.value.showDetails?.let {data->
-                            Log.e("test Data", "onCreate: $data", )
+                            Log.e("test Data", "onCreate: ${data.results}", )
                         }
 
                     }

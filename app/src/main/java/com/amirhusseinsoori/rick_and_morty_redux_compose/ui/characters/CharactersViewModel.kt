@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.amirhusseinsoori.rick_and_morty_redux_compose.data.repository.RepositoryImp
 import com.amirhusseinsoori.rick_and_morty_redux_compose.domin.exception.Result
+import com.amirhusseinsoori.rick_and_morty_redux_compose.domin.model.Characters
 import com.apollographql.apollo.api.Response
 import com.hb.rickandmortyapollo.GetCharactersQuery
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -40,9 +41,8 @@ class CharactersViewModel @Inject constructor(val repositoryImp: RepositoryImp) 
 
 
     data class State(
-        val showDetails: GetCharactersQuery.Data? = null
-
-
+        val showDetails:
+        Characters? = null
     )
 
 
