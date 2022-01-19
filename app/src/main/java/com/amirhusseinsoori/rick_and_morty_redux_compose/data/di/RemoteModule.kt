@@ -1,5 +1,6 @@
 package com.amirhusseinsoori.rick_and_morty_redux_compose.data.di
 
+import com.amirhusseinsoori.rick_and_morty_redux_compose.common.Constance.baseUrl
 import com.apollographql.apollo.ApolloClient
 import dagger.Module
 import dagger.Provides
@@ -15,6 +16,6 @@ object RemoteModule {
     @Singleton
     @Provides
     fun apolloClient(): ApolloClient =
-        ApolloClient.builder().serverUrl("https://rickandmortyapi.com/graphql").build()
+        ApolloClient.builder().serverUrl(baseUrl).build()
 
 }

@@ -27,8 +27,8 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     viewModel.state.collectAsState().let {
-                        it.value.showDetails?.let {
-                            Log.e("TAG", "onCreate: ${it}", )
+                        it.value.showDetails?.let {data->
+                            Log.e("test Data", "onCreate: $data", )
                         }
 
                     }
