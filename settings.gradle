@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "rick_and_morty_Redux_Compose"
 include ':app'
+include ':domain'

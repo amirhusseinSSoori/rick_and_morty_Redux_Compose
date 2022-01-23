@@ -1,4 +1,6 @@
-package com.amirhusseinsoori.rick_and_morty_redux_compose.domin.model
+package com.amirhusseinsoori.domain.model
+
+import com.amirhusseinsoori.domain.model.Episode
 
 data class Result(
     val episode: List<Episode>,

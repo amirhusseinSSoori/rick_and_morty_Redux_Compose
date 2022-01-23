@@ -2,15 +2,12 @@ package com.amirhusseinsoori.rick_and_morty_redux_compose.ui.characters
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.amirhusseinsoori.domain.model.Characters
 import com.amirhusseinsoori.rick_and_morty_redux_compose.data.repository.RepositoryImp
-import com.amirhusseinsoori.rick_and_morty_redux_compose.domin.exception.Result
-import com.amirhusseinsoori.rick_and_morty_redux_compose.domin.model.Characters
-import com.apollographql.apollo.api.Response
-import com.hb.rickandmortyapollo.GetCharactersQuery
+
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

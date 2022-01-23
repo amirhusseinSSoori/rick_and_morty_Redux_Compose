@@ -1,4 +1,4 @@
-package com.amirhusseinsoori.rick_and_morty_redux_compose.domin.model
+package com.amirhusseinsoori.domain.model
 
 data class Characters(
     val info: Info,
