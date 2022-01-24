@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="rick_and_morty_Redux_Compose.app" target="11" />
+      <module name="rick_and_morty_Redux_Compose.data" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
