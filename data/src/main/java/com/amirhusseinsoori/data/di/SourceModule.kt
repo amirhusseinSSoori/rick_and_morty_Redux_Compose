@@ -1,7 +1,7 @@
 package com.amirhusseinsoori.data.di
 
-import com.amirhusseinsoori.data.datasource.ShowCategorySourceImp
-import com.amirhusseinsoori.domain.datasource.ShowCategorySource
+import com.amirhusseinsoori.data.datasource.ShowCharactersSourceImp
+import com.amirhusseinsoori.domain.datasource.ShowCharactersSource
 
 import dagger.Binds
 import dagger.Module
@@ -12,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface SourceModule {
  @Binds
- fun provideSourceCategoryRemote(showCategorySourceImp: ShowCategorySourceImp): ShowCategorySource
+ fun provideSourceCharactersRemote(showCategorySourceImp: ShowCharactersSourceImp): ShowCharactersSource
 }

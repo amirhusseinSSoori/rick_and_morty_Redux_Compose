@@ -3,6 +3,6 @@ package com.amirhusseinsoori.domain.datasource
 import com.amirhusseinsoori.domain.model.Characters
 
 
-interface ShowCategorySource {
+interface ShowCharactersSource {
     suspend fun getCharacters(): Characters
 }
