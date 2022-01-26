@@ -22,9 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Rick_and_morty_Redux_ComposeTheme {
-
                 val viewModel: CharactersViewModel = hiltViewModel()
-                // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     viewModel.state.collectAsState().let {
                         it.value.showDetails?.let {data->

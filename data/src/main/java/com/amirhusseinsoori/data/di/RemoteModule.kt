@@ -1,6 +1,7 @@
-package com.amirhusseinsoori.rick_and_morty_redux_compose.data.di
+package com.amirhusseinsoori.data.di
 
-import com.amirhusseinsoori.rick_and_morty_redux_compose.common.Constance.baseUrl
+import com.amirhusseinsoori.common.Constance.baseUrl
+
 import com.apollographql.apollo.ApolloClient
 import dagger.Module
 import dagger.Provides

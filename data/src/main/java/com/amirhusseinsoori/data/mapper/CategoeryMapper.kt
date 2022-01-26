@@ -1,22 +1,22 @@
-package com.amirhusseinsoori.rick_and_morty_redux_compose.data.mapper
+package com.amirhusseinsoori.data.mapper
 
+import com.amirhusseinsoori.common.Constance.EMPTY_STRING
 import com.amirhusseinsoori.domain.model.Characters
 import com.amirhusseinsoori.domain.model.Episode
 import com.amirhusseinsoori.domain.model.Info
-import com.amirhusseinsoori.rick_and_morty_redux_compose.common.Constance.EMPTY_STRING
 
-import com.hb.rickandmortyapollo.GetCharactersQuery
+import hb.rickandmortyapollo.GetCharactersQuery
 
 
 fun GetCharactersQuery.Characters.mapToCategoryModel(): Characters {
     return Characters(
-        info = info!!.mapToInfoModel(),
-        results = results!!.mapToListResult()
+        info = info()!!.mapToInfoModel(),
+        results = results()!!.mapToListResult()
     )
 }
 
 fun GetCharactersQuery.Info.mapToInfoModel(): Info {
-    return Info(count = count!!, next = next!!, pages = pages!!)
+    return Info(count = count()!!, next = next()!!, pages = pages()!!)
 }
 
 fun List<GetCharactersQuery.Result?>.mapToListResult(): List<com.amirhusseinsoori.domain.model.Result> {
@@ -25,10 +25,10 @@ fun List<GetCharactersQuery.Result?>.mapToListResult(): List<com.amirhusseinsoor
 
 fun GetCharactersQuery.Result.mapToResult(): com.amirhusseinsoori.domain.model.Result {
     return com.amirhusseinsoori.domain.model.Result(
-        episode = episode!!.mapToListEpisode(),
-        id = id ?: EMPTY_STRING,
-        image = image ?: EMPTY_STRING,
-        name = name ?: EMPTY_STRING,
+        episode = episode()!!.mapToListEpisode(),
+        id = id() ?: EMPTY_STRING,
+        image = image() ?: EMPTY_STRING,
+        name = name() ?: EMPTY_STRING,
     )
 }
 
@@ -37,5 +37,5 @@ fun List<GetCharactersQuery.Episode?>.mapToListEpisode(): List<Episode> {
 }
 
 fun GetCharactersQuery.Episode.mapToEpisode(): Episode {
-    return Episode(id = id ?: EMPTY_STRING, name = name ?: EMPTY_STRING)
+    return Episode(id = id() ?: EMPTY_STRING, name = name() ?: EMPTY_STRING)
 }

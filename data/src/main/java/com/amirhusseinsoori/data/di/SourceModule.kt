@@ -1,7 +1,7 @@
-package com.amirhusseinsoori.rick_and_morty_redux_compose.data.di
+package com.amirhusseinsoori.data.di
 
+import com.amirhusseinsoori.data.datasource.ShowCategorySourceImp
 import com.amirhusseinsoori.domain.datasource.ShowCategorySource
-import com.amirhusseinsoori.rick_and_morty_redux_compose.data.datasource.remote.ShowCategorySourceImp
 
 import dagger.Binds
 import dagger.Module
