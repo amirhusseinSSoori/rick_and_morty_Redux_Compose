@@ -48,7 +48,7 @@ dependencies {
     implementation "com.apollographql.apollo:apollo-coroutines-support:2.5.9"
     implementation "com.dropbox.mobile.store:store4:4.0.4-KT15"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+
 
     implementation "com.google.dagger:hilt-android:2.40.1"
     kapt "com.google.dagger:hilt-compiler:2.40.1"

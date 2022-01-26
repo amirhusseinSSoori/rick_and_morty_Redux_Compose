@@ -15,7 +15,8 @@ dependencies {
     //hilt
     implementation "com.google.dagger:hilt-core:2.40.1"
     kapt "com.google.dagger:hilt-android-compiler:2.40.1"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+
+
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 
 

@@ -1,6 +1,6 @@
 package com.amirhusseinsoori.data.di
 
-import com.amirhusseinsoori.data.datasource.ShowCharactersSourceImp
+import com.amirhusseinsoori.data.datasource.remote.ShowCharactersSourceImp
 import com.amirhusseinsoori.domain.datasource.ShowCharactersSource
 
 import dagger.Binds
